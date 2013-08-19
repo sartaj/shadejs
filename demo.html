@@ -1,0 +1,306 @@
+<html>
+	<head>
+		<style>
+			/* Structure */
+
+				* {
+					margin: 0;
+					padding: 0;
+					position: relative;
+				  	z-index: inherit;
+				}
+
+				div {
+					float: left;
+					display: inline;
+					box-sizing: border-box;
+				}
+
+				.col{padding-left:2%;padding-right:2%}
+				.row{padding-top:2%;padding-bottom:2%}
+
+				.w10{width:10%}
+				.w15{width:15%}
+				.w20{width:20%}
+				.w25{width:25%}
+				.w30{width:30%}
+				.w33{width:33%}
+				.w40{width:40%}
+				.w50{width:50%}
+				.w60{width:60%}
+				.w66{width:66%}
+				.w70{width:70%}
+				.w75{width:75%}
+				.w80{width:80%}
+				.w85{width:85%}
+				.w90{width:90%}
+				.w100{width:100%}
+
+				.clearfix {clear:both;}
+
+			/* Font */
+
+				* {
+					font-family: "Open Sans", "Helvetica Neue", "Helvetica", san-serif;
+					font-weight: 300;
+					color: #333;
+				}
+
+			/* Divs */
+				body,html {
+					background: #4086A7;
+					height: 100%;
+				}
+				div {
+					border-radius:10px;
+				}
+				.shadow {
+					background: white;
+				}
+
+				.sun {
+					border-radius:150px!important;
+					width: 250px;
+					height:250px;
+					margin: 0 auto;
+					background: rgb(228, 228, 25)!important;
+				}
+				.sun-text {
+					position:absolute; 
+					top:45%;
+					width: 100%;
+			 		text-align: center;
+				}
+				.shadow-lightsource {
+					box-shadow: 0px 0px 55px #fff!important;
+					background: white;
+				}
+				.zebra {
+					border: 1px solid #8F8F8F;
+				}
+				.footer {
+					position: fixed;  
+					bottom: 0;
+					border-radius: 0;
+					background: rgb(58, 126, 41);
+					color: white;
+				}
+			/* Layers */
+				.shadow-lightsource {
+					z-index: 10 ;
+				}
+				body {
+					z-index: 10;
+					overflow-x: hidden;
+				}
+				.zebra {
+					z-index: 10;
+				}
+			/* Transitions */
+				*, .shadow, .shadow-lightsource {
+			        transition:all .2s linear; 
+			            -o-transition:all .2s linear; 
+			            -moz-transition:all .2s linear; 
+			            -webkit-transition:all .2s linear;
+				}
+			/* Selectable */
+				*{
+					-webkit-touch-callout: none;
+					-webkit-user-select: none;
+					-khtml-user-select: none;
+					-moz-user-select: -moz-none;
+					-ms-user-select: none;
+					user-select: none;
+					cursor: default;
+				}
+				.shadow, .shadow * {
+					cursor: pointer;
+				}
+
+			/* Clouds */
+
+
+			#clouds{
+			position: absolute;
+			top: 300px;
+			left: 0;
+			}
+
+			.cloud {
+				width: 200px; height: 60px;
+				background: #fff;
+				
+				border-radius: 200px;
+				-moz-border-radius: 200px;
+				-webkit-border-radius: 200px;
+				
+				position: absolute; 
+			}
+
+			.cloud:before, .cloud:after {
+				content: '';
+				position: absolute; 
+				background: #fff;
+				width: 100px; height: 80px;
+				position: absolute; top: -15px; left: 10px;
+				
+				border-radius: 100px;
+				-moz-border-radius: 100px;
+				-webkit-border-radius: 100px;
+				
+				-webkit-transform: rotate(30deg);
+				transform: rotate(30deg);
+				-moz-transform: rotate(30deg);
+			}
+
+			.cloud:after {
+				width: 120px; height: 120px;
+				top: -55px; left: auto; right: 15px;
+			}
+
+			.x1 {
+				-webkit-animation: moveclouds 15s linear infinite;
+				-moz-animation: moveclouds 15s linear infinite;
+				-o-animation: moveclouds 15s linear infinite;
+			}
+
+			.x2 {
+				left: 200px;
+				
+				-webkit-transform: scale(0.6);
+				-moz-transform: scale(0.6);
+				transform: scale(0.6);
+				opacity: 0.6; /*opacity proportional to the size*/
+				
+				/*Speed will also be proportional to the size and opacity*/
+				/*More the speed. Less the time in 's' = seconds*/
+				-webkit-animation: moveclouds 25s linear infinite;
+				-moz-animation: moveclouds 25s linear infinite;
+				-o-animation: moveclouds 25s linear infinite;
+			}
+
+			.x3 {
+				left: -250px; top: -200px;
+				
+				-webkit-transform: scale(0.8);
+				-moz-transform: scale(0.8);
+				transform: scale(0.8);
+				opacity: 0.8; /*opacity proportional to the size*/
+				
+				-webkit-animation: moveclouds 20s linear infinite;
+				-moz-animation: moveclouds 20s linear infinite;
+				-o-animation: moveclouds 20s linear infinite;
+			}
+
+			.x4 {
+				left: 470px; top: -250px;
+				
+				-webkit-transform: scale(0.75);
+				-moz-transform: scale(0.75);
+				transform: scale(0.75);
+				opacity: 0.75; /*opacity proportional to the size*/
+				
+				-webkit-animation: moveclouds 18s linear infinite;
+				-moz-animation: moveclouds 18s linear infinite;
+				-o-animation: moveclouds 18s linear infinite;
+			}
+
+			.x5 {
+				left: -150px; top: -150px;
+				
+				-webkit-transform: scale(0.8);
+				-moz-transform: scale(0.8);
+				transform: scale(0.8);
+				opacity: 0.8; /*opacity proportional to the size*/
+				
+				-webkit-animation: moveclouds 20s linear infinite;
+				-moz-animation: moveclouds 20s linear infinite;
+				-o-animation: moveclouds 20s linear infinite;
+			}
+
+			@-webkit-keyframes moveclouds {
+				0% {margin-left: 1000px;}
+				100% {margin-left: -1000px;}
+			}
+			@-moz-keyframes moveclouds {
+				0% {margin-left: 1000px;}
+				100% {margin-left: -1000px;}
+			}
+			@-o-keyframes moveclouds {
+				0% {margin-left: 1000px;}
+				100% {margin-left: -1000px;}
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="clouds">
+			<div class="cloud x1"></div>
+			<!-- Time for multiple clouds to dance around -->
+			<div class="cloud x2"></div>
+			<div class="cloud x3"></div>
+			<div class="cloud x4"></div>
+			<div class="cloud x5"></div>
+		</div>
+		<div class="row col w100" style="z-index:10">
+			<p class="shadow" style="padding:2%"><span style="font-size:120%;font-weight:600">Shade.js</span></p>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div class="col row w100 " style="z-index:10">
+			<div class="row w40 shadow" >
+				<h1 style="text-align:center">Create Relative Box Shadows</h1>
+			</div>
+			<div class="row w20">
+			</div>
+			<div class="col w40" style="z-index:10">
+				<div class="shadow sun shadow-lightsource"><h3 class='sun-text'></h3></div>
+			</div>
+		</div>
+		<div class="col row w100 " >
+			<div class="col w25">
+				&nbsp;
+			</div>
+			<div class="col 50">
+				&nbsp;
+			</div>
+			<div class="col row 25 shadow zebra">
+				<span style="font-weight:400">Click a Box. Any Box.</span>
+			</div>
+		</div>
+		<div class=" w100">
+			<div class="col row w100 shadow footer">
+				<p>copy-it 2013</p>
+			</div>
+		</div>
+
+	<script src="shade.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script>
+
+		shade('shadow',{
+			lightClass: 'shadow-lightsource',
+		});		
+
+		$('.shadow').click(function(){			
+			$('.shadow-lightsource').addClass('shadow');
+			$('.shadow-lightsource').css('box-shadow','');
+			$('.shadow-lightsource').removeClass('shadow-lightsource');
+
+			$('.shadow').each(function(){
+				$(this).css('box-shadow','');
+			})
+			$(this).addClass('shadow-lightsource');
+			$(this).removeClass('shadow');
+
+			shade('shadow',{
+				lightClass: 'shadow-lightsource',
+			});	
+
+		});
+
+	</script>
+
+	</body>
+</html>
