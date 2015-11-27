@@ -1,6 +1,8 @@
+## Not Maintained (Mostly just a demo now)
+
 shadejs
 =======
 
 Generate relative box-shadows.
 
-This is still in development and not ready for production.
+Check out the [demo](http://sartaj.me/shadejs/)
